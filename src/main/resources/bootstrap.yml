@@ -1,9 +1,10 @@
 server:
   port: 15001
 spring:
-  output.ansi.enabled: 'ALWAYS'
   profiles:
+    active: dev
     include: eureka
+  output.ansi.enabled: 'ALWAYS'
   application:
     name: eureka-service
   cloud:
