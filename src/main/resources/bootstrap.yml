@@ -11,8 +11,12 @@ spring:
     config:
       failFast: true
       retry:
-        initialInterval: 3000
-        multiplier: 1.3
-        maxInterval: 5000
-        maxAttempts: 10
+        initialInterval: 1000
+        multiplier: 1.1
+        maxAttempts: 6
       uri: http://localhost:15000
+
+---
+spring:
+  profiles: docker
+  cloud.config.uri: http://omnia-config-service:15000
